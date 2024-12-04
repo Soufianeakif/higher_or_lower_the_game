@@ -30,8 +30,8 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: backgroundColor, // Set background color to transparent
-        onPrimary: textColor, // Set text color
+        backgroundColor: backgroundColor, // Set background color to transparent
+        foregroundColor: textColor, // Set text color (used to set text and icon color)
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
           side: BorderSide(color: borderColor, width: 2), // Custom border

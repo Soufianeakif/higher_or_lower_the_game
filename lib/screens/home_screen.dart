@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                 CustomButton(
                   text: 'Play',
                   onPressed: () {
-                    print('Play button pressed');
+                    Navigator.pushNamed(context, '/game');
                   },
                   borderColor: AppColors.Green,
                   textColor: AppColors.Green,

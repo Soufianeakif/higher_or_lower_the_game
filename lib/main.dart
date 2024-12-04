@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:higher_or_lower_the_game/screens/game_screen.dart';
 import 'package:higher_or_lower_the_game/screens/home_screen.dart';
 
 void main() {
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
-        //'/game': (context) => GameScreen(), // Replace with your game screen
+        '/': (context) => const HomeScreen(),
+        '/game': (context) => GameScreen(), // Replace with your game screen
       },
     );
   }
