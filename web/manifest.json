@@ -1,6 +1,6 @@
 {
-    "name": "higher_or_lower_the_game",
-    "short_name": "higher_or_lower_the_game",
+    "name": "higher_or_lower",
+    "short_name": "higher_or_lower",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

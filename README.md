@@ -1,4 +1,4 @@
-# higher_or_lower_the_game
+# higher_or_lower
 
 A new Flutter project.
 

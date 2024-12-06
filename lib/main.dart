@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:higher_or_lower_the_game/screens/game_screen.dart';
-import 'package:higher_or_lower_the_game/screens/home_screen.dart';
+import 'package:higher_or_lower/screens/game_screen.dart';
+import 'package:higher_or_lower/screens/home_screen.dart';
+
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
-        '/game': (context) => GameScreen(), // Replace with your game screen
+        '/game': (context) => const GameScreen(), // Replace with your game screen
       },
     );
   }

@@ -1,5 +1,8 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';  // Import the google_fonts package
+
+import '../utils/constants.dart';
+import '../widgets/custom_button.dart';
 
 class GameScreen extends StatelessWidget {
   const GameScreen({super.key});
@@ -17,51 +20,73 @@ class GameScreen extends StatelessWidget {
                 // Image for the top half
                 Positioned.fill(
                   child: Image.network(
-                    'https://api.higherlowergame.com/_client/images/general/duckduckgo.jpg', // Replace with your image URL
+                    'https://api.higherlowergame.com/_client/images/general/duckduckgo.jpg',
                     fit: BoxFit.cover,
-                    width: double.infinity, // Ensures the image takes the full width
+                  ),
+                ),
+                // Blur effect overlay
+                Positioned.fill(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+                    child: Container(
+                      color: Colors.black.withOpacity(0), // Transparent overlay to enable blur
+                    ),
                   ),
                 ),
                 // Text overlaying the image
-                Center(
+                const Center(
                   child: Text(
                     'DuckDuckGo',
-                    style: GoogleFonts.lilitaOne(  // Apply the lilitaOne font
-                      fontSize: 30,
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 36,
                       color: Colors.white,
-                      backgroundColor: Colors.black.withOpacity(0.5),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-
-          // Bottom half with text inside image
           Expanded(
             flex: 1,
             child: Stack(
               children: [
-                // Image for the bottom half
+                // Image for the top half
                 Positioned.fill(
                   child: Image.network(
-                    'https://api.higherlowergame.com/_client/images/general/bmw.jpg', // Replace with your image URL
+                    'https://api.higherlowergame.com/_client/images/general/bmw.jpg',
                     fit: BoxFit.cover,
-                    width: double.infinity, // Ensures the image takes the full width
+                  ),
+                ),
+                // Blur effect overlay
+                Positioned.fill(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+                    child: Container(
+                      color: Colors.black.withOpacity(0), // Transparent overlay to enable blur
+                    ),
                   ),
                 ),
                 // Text overlaying the image
-                Center(
+                const Center(
                   child: Text(
-                    'Bottom Image Text',
-                    style: GoogleFonts.lilitaOne(  // Apply the lilitaOne font
-                      fontSize: 30,
+                    'BMW',
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 36,
                       color: Colors.white,
-                      backgroundColor: Colors.black.withOpacity(0.5),
                     ),
                   ),
+                ),
+                CustomButton(
+                  text: 'Exit',
+                  onPressed: () {
+                    print('Exit button pressed');
+                  },
+                  borderColor: AppColors.Red,
+                  textColor: AppColors.Red,
+                  width: 200,
+                  height: 60,
                 ),
               ],
             ),
